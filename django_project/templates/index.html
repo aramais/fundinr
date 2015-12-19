@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="shortcut icon" href="materials/favicon.ico" type="image/x-icon">
+<title>FundInRealty - коллективные инвестиции в жилую недвижимость. Краудфандинг в недвижимость</title>
+<meta name="keywords" content="Инвестиции, краудфандинг, инвестиции в недвижимость, доход с недвижимости, сбережения, коллективные инвестиции">
+<meta name"description" content="FundInRealty - краундфандинговые инвестиции в жилую недвижимость.">
+<meta property="og:description" content="Инвестиции, краудфандинг, инвестиции в недвижимость, доход с недвижимости, сбережения, коллективные инвестиции">
+
+<link rel="stylesheet" type="text/css" media="all" href="{{STATIC_URL}}assets/style.css">
+
+</head>
+
+<style>
+body{
+	margin:0 !important;
+}
+
+.preload{
+	width:0px;
+	height:0px;
+	position:absolute;
+	z-index:-2;
+	display:none;
+	visibility:hidden;
+}
+
+</style>
+
+
+<body>
+<header class="header">
+	<div class="wrapper cf">
+		<div class="logo">
+			<img src="{{STATIC_URL}}assets/materials/logo.svg">
+		</div>
+		<ul class="navi">
+			<li class="login_button">Войти</li>
+			<li>Регистрация</li>
+			<li>Помощь</li>
+		</ul>
+	</div>
+</header>
+
+<div class="back1"><div class="back1_cover">
+	<div class="big_title_block cf">
+		<div style="clear:both"></div>
+		<h1 class="big_title">Коллективные и безопасные инвестиции в недвижимость</h1>
+		<div class="search_block">
+			<div class="search">
+				<div class="search_select">
+					<select class="search_select_class">
+						<option>Квартира</option>
+						<option>Пентхаус</option>
+						<option>Таунхаус</option>
+						<option>Загородные дома</option>
+					</select>
+				</div>
+				<div class="search_select">
+					<select class="search_select_class">
+						<option>Москва</option>
+						<option>Московская область</option>
+						<option>Санкт-Петербург</option>
+						<option>Ленинградская область</option>
+					</select>
+				</div>
+			</div>
+			<a href={% url 'search' %}><button class="search_button main_button_search">Найти</button></a>
+		</div>	
+	</div>
+	<div class="main_more_block">
+		<div class="main_more">
+			<a href="#how_works_block">Как это работает?</a>
+		</div>
+	</div>
+</div></div>
+
+
+<div id="how_works_block" class="width">
+	<div class="wrapper cf">
+		<h2 class="how_works_header">
+			Инвестируйте в недвижимость коллективно, получайте доход индивидуально
+		</h2>
+		<div class="construction_block">
+			<div class="building_icon">
+				<img src="{{STATIC_URL}}assets/materials/construction.svg">
+			</div>
+			<div class="hiw_block_text">
+				<h3 class="hiw_block_header">Коллективная покупка в период строительства</h3>
+				<div class="hiw_block_desc">Вы покупаете жилую недвижимость на стадии строительства: чем более ранняя стадия, тем дешевле покупка и тем больше потенциальная доходность. Ваша доля пропорциональна стоимости квартиры в момент инвестиций</div>
+			</div>
+		</div>
+		<div class="building_block">
+			<div class="building_icon">
+				<img src="{{STATIC_URL}}assets/materials/building.svg">
+			</div>
+			<div class="hiw_block_text">
+				<h3 class="hiw_block_header">Продажа доли/квартиры</h3>
+				<div class="hiw_block_desc">Вы можете продать свою долю в купленной квартире одному из соинвесторов (пайщиков), так же вы можете в любой момент разместить свой лот в нашей системе на продажу.<br>
+				Однаком мы рекомендуем продавать долю и квартиру только после полноценной сдачи здания в экслпутацию, что может позволить вам увеличить доходность до 100%</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div id="yield_block" class="width">
+	<div class="wrapper cf">
+		<div class="yield">
+			<div class="yield_numbers">30-50%</div>
+			<span class="yield_text">Доходности с продажи квартиры</span>
+		</div>
+		<div class="yield_desc">
+			Инвестируя в недвижмость через сервис FundInRealty вы можете получить высокую годовую доходность в сравнении с классическими банковскими инструментами. Все ваши инвестиции страхуются от долгостроев, финансовых рисков застройщика.<br>
+			Так же вы можете в любой момент продать свою долю, тем самым зафиксировав прибыль. Кроме того, вы получите дополнительную прибыль за счет роста стоимости недвижимости на 5-7% в год.<br>
+			Минимальный объем инвестиций через FundInRealty составляет 100 000 рублей.
+		</div>
+	</div>
+</div>
+
+
+
+<footer class="footer">
+	<div class="wrapper cf">
+		<ul class="footer_list cf">
+			<li><b>FundInRealty</b></li>
+			<li><a href="#">Главная</a></li>
+			<li><a href="#">О компании</a></li>
+			<li><a href="#">Объекты недвижимости</a></li>
+			<li><a href="#">Помощь</a></li>
+		</ul>
+		<div class="copyright">Москва, 2015</div>
+	</div>
+</footer>
+
+
+
+</body>

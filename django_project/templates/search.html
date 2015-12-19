@@ -1,0 +1,239 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="shortcut icon" href="materials/favicon.ico" type="image/x-icon">
+<title>FundInRealty - коллективные инвестиции в жилую недвижимость. Краудфандинг в недвижимость</title>
+<meta name="keywords" content="Инвестиции, краудфандинг, инвестиции в недвижимость, доход с недвижимости, сбережения, коллективные инвестиции">
+<meta name"description" content="FundInRealty - краундфандинговые инвестиции в жилую недвижимость.">
+<meta property="og:description" content="Инвестиции, краудфандинг, инвестиции в недвижимость, доход с недвижимости, сбережения, коллективные инвестиции">
+
+<link rel="stylesheet" type="text/css" media="all" href="{{STATIC_URL}}assets/style.css">
+
+</head>
+
+<style>
+body{
+	margin:0 !important;
+}
+
+.preload{
+	width:0px;
+	height:0px;
+	position:absolute;
+	z-index:-2;
+	display:none;
+	visibility:hidden;
+}
+
+</style>
+
+
+<body>
+<header class="header">
+	<div class="wrapper cf">
+		<div class="logo">
+			<a href={% url 'home' %}><img src="{{ STATIC_URL }}assets/materials/logo.svg"></a>
+		</div>
+		<ul class="navi">
+			<li class="login_button">Войти</li>
+			<li>Регистрация</li>
+			<li>Помощь</li>
+		</ul>
+	</div>
+</header>
+
+<div id="search_settings" class="width">
+	<div class="wrapper cf">
+		<div class="search_settings_header">
+			Параметры поиска:
+		</div>
+		<div class="search_settings_block cf">
+			<div class="city_flat_setting_block">
+				<div class="search_settings">
+					<div class="search_settings_select">
+						<select class="search_settings_select_class">
+							<option>Квартира</option>
+							<option>Пентхаус</option>
+							<option>Таунхаус</option>
+							<option>Загородные дома</option>
+						</select>
+					</div>
+				</div>
+				<div class="search_settings">
+					<div class="search_settings_select">
+						<select class="search_settings_select_class">
+							<option>Москва</option>
+							<option>Московская область</option>
+							<option>Санкт-Петербург</option>
+							<option>Ленинградская область</option>
+						</select>
+					</div>
+				</div>
+			</div>	
+			<div class="price_settings_block">
+				<div class="price_settings_header">Цена:</div>
+				<input class="price_input_block" placeholder="От">
+				<div style="float:left; margin-right:10px">-</div>
+				<input class="price_input_block" placeholder="До">
+				<div class="item_settings price_settings_option">
+					<div class="item_settings_select">
+						<select class="item_settings_select_class price_settings_option">
+							<option>за все</option>
+							<option>за кв. м.</option>
+						</select>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="search_settings_block cf">
+			<div class="setting_item_block cf">
+				<div class="setting_item_header">
+					Кол-во комнат:
+				</div>
+				<div class="item_settings room_settings">
+					<div class="item_settings_select">
+						<select class="item_settings_select_class room_settings">
+							<option>Студия</option>
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+							<option>6</option>
+							<option>6+</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="setting_item_block cf">
+				<div class="setting_item_header">Метраж:</div>
+				<input class="item_select_input" placeholder="От">
+				<div style="float:left; margin-right:10px">-</div>
+				<input class="item_select_input" placeholder="До">
+			</div>
+			<div class="setting_item_block cf">
+				<div class="setting_item_header">
+					Санузел:
+				</div>
+				<div class="item_settings wc_settings">
+					<div class="item_settings_select">
+						<select class="item_settings_select_class wc_settings">
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>3+</option>
+						</select>
+					</div>
+				</div>
+				<div class="item_settings wc_option_settings">
+					<div class="item_settings_select">
+						<select class="item_settings_select_class wc_option_settings">
+							<option>неважно</option>
+							<option>Совместный</option>
+							<option>Раздельный</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="setting_item_block cf">
+				<div class="setting_item_header">
+					Балкон:
+				</div>
+				<div class="item_settings">
+					<div class="item_settings_select">
+						<select class="item_settings_select_class">
+							<option>неважно</option>
+							<option>да</option>
+							<option>нет</option>
+						</select>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="search_settings_block cf">
+			<div class="setting_item_block cf">
+				<div class="setting_item_header">
+					Тип здания:
+				</div>
+				<div class="item_settings">
+					<div class="item_settings_select">
+						<select class="item_settings_select_class">
+							<option>Панельный</option>
+							<option>Монолитно-кирпичный</option>
+							<option>Монолитный</option>
+							<option>Кирпичный</option>
+							<option>Блочный</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="setting_item_block cf">
+				<div class="setting_item_header">
+					Метро:
+				</div>
+				<div class="item_settings">
+					<div class="item_settings_select">
+						<select class="item_settings_select_class">
+							<option>Неважно</option>
+							<option>Академическая</option>
+							<option>Арбатская</option>
+							<option>Автозаводская</option>
+							<option>Баррикадная</option>
+							<option>Библиотека имени Ленина</option>
+						</select>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="search_settings_block cf">
+			<div class="setting_item_block cf">
+				<div class="setting_item_header">Минимальный объем инвестиций:</div>
+				<input class="item_select_input" placeholder="От">
+				<div style="float:left; margin-right:10px">-</div>
+				<input class="item_select_input" placeholder="До">
+			</div>
+			<div class="setting_item_block cf">
+				<div class="setting_item_header">Минимальная доля:</div>
+				<input class="item_select_input" placeholder="От">
+				<div style="float:left; margin-right:10px">-</div>
+				<input class="item_select_input" placeholder="До">
+			</div>
+		</div>
+		<button class="settings_search_button">Найти</button>
+	</div>
+</div>
+
+
+<div id="results_block">
+	<div class="wrapper cf">
+		<h1 class="results_header">Квартиры по вашему запросу:</h1>
+		<div class="results_block">
+			<div class="result result_margin">
+				asdf
+			</div>
+			<div class="result">
+				asdf
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<footer class="footer">
+	<div class="wrapper cf">
+		<ul class="footer_list cf">
+			<li><b>FundInRealty</b></li>
+			<li><a href="#">Главная</a></li>
+			<li><a href="#">О компании</a></li>
+			<li><a href="#">Объекты недвижимости</a></li>
+			<li><a href="#">Помощь</a></li>
+		</ul>
+		<div class="copyright">Москва, 2015</div>
+	</div>
+</footer>
+
+
+
+</body>
