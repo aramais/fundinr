@@ -9,7 +9,7 @@ class Developer(models.Model):
                                     blank=True)
 
     def __unicode__(self):
-        return str(self.region_id) + self.address
+        return self.name
 
 
 class Regions(models.Model):
@@ -75,5 +75,4 @@ class Property(models.Model):
     image = models.ImageField(upload_to='images', default='images/default.jpg')
 
     def __unicode__(self):
-        return str(self.region_id) + self.address
-
+        return self.header + self.address
